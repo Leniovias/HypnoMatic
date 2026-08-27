@@ -18,6 +18,7 @@
 				</div>
 				<div class="half-size border">
 					<h2 class="section-title">Active Audio</h2>
+					<input id="master-volume" class="master-volume" type="range" oninput="volume(this)" min="0" max="100" value="100" />
 					<div id="options_active" class="card-collection">
 						
 					</div>
@@ -33,7 +34,7 @@
 				<span class="btn-add">+</span>
 				<span class="btn-remove">-</span>				
 			</button>
-			<input class="volume-toggle" type="range" onchange="volume(this, '{{id}}')" min="0" max="100" value="0" />
+			<input class="volume-toggle" type="range" oninput="volume(this, '{{id}}')" min="0" max="100" value="0" />
 		</div>
 	</template>
 	<script src="assets/script.js"></script>
