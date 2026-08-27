@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>HypnoMatic Mockup</title>
+		<link rel="stylesheet" href="assets/style.css">
+	</head>
+	<body>
+		<div class="main_window">
+			<div class="title">
+				<h1 class="page-title">HypnoMatic!!</h1>
+			</div>
+			<div class="selection_window">
+				<div class="half-size border">
+					<h2 class="section-title">Audio Pool</h2>
+					<div id="options_pool" class="card-collection">
+					</div>
+				</div>
+				<div class="half-size border">
+					<h2 class="section-title">Active Audio</h2>
+					<div id="options_active" class="card-collection">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<template id="option-card-template">
+		<div class="option-card" id="{{id}}" active="0">
+			<img class="background-image" src="images/{{image}}" />
+			<h3 class="card-title">{{title}}</h3>
+			<button class="toggle-button" onclick="toggle('{{id}}', 'sounds/{{sound}}');">
+				<span class="btn-add">+</span>
+				<span class="btn-remove">-</span>				
+			</button>
+			<input class="volume-toggle" type="range" onchange="volume(this, '{{id}}')" min="0" max="100" value="0" />
+		</div>
+	</template>
+	<script src="assets/script.js"></script>
+</html>
