@@ -5,7 +5,7 @@
 }
 
 body {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -50,14 +50,18 @@ h1.page-title {
 
 .selection_window {
 	width: 100%;
+	height: calc(100% - 100px);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
 .half-size {
-	width: calc(50% - 20px);
+	width: calc(50% - 15px);
 	position: relative;
+	height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .border {
@@ -68,15 +72,18 @@ h1.page-title {
 	margin: 0;
 	padding: 10px;
 	text-align: center;
+	height: 30px;
+	line-height: 30px;
  }
  
  .option-card {
 	position: relative;
 	height: 60px;
+    min-height: 60px;
 	width: 100%;
 	border: 1px solid white;
 	background: #ffffff11;
-	margin: 10px 0;
+	margin: 5px 0;
 }
 
 .option-card img {
@@ -88,8 +95,21 @@ h1.page-title {
 	height: 60px;
 }
 
+.card-collection-wrapper {
+	padding: 10px 15px 10px 10px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-gutter: stable both-edges;
+}
+
 .card-collection {
-	padding: 10px 20px;
+	display: flex;
+    flex-direction: column;
 }
 
 .toggle-button {
@@ -127,6 +147,7 @@ h1.page-title {
 	top: 30px;
 	line-height: 30px;
 	margin: 0;
+	color: white;
 }
 
 .volume-toggle:before {

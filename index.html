@@ -2,8 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>HypnoMatic Mockup</title>
+		<title>HypnoMatic</title>
 		<link rel="stylesheet" href="assets/style.css?v=2">
+		<link rel="icon" type="image/x-icon" href="assets/icon.png">
 	</head>
 	<body>
 		<div class="main_window">
@@ -13,21 +14,24 @@
 			<div class="selection_window">
 				<div class="half-size border">
 					<h2 class="section-title">Audio Pool</h2>
-					<div id="options_pool" class="card-collection">
+					<div class="card-collection-wrapper">
+						<div id="options_pool" class="card-collection">
+						</div>
 					</div>
 				</div>
 				<div class="half-size border">
 					<h2 class="section-title">Active Audio</h2>
 					<input id="master-volume" class="master-volume" type="range" oninput="volume(this)" min="0" max="100" value="100" />
-					<div id="options_active" class="card-collection">
-						
+					<div class="card-collection-wrapper">
+						<div id="options_active" class="card-collection">
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</body>
 	<template id="option-card-template">
-		<div class="option-card" id="{{id}}" active="0">
+		<div class="option-card" id="{{id}}" active="0" style="order: {{order}};">
 			<img class="background-image" src="images/{{image}}" />
 			<h3 class="card-title">{{title}}</h3>
 			<button class="toggle-button" onclick="toggle('{{id}}', 'sounds/{{sound}}');">

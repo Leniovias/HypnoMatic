@@ -3,12 +3,82 @@ active_sounds = {};
 options = [
 	{
 		id: "fireplace",
-		order: 1,
-		title: "Fireplace",
+		title: "Fireplace crackling",
 		image: "fireplace.png",
 		sound: "fireplace.mp3"
-	}
+	},
+	{
+		id: "old_train",
+		title: "Old train on rails",
+		image: "placeholder.jpg",
+		sound: "train.mp3"
+	},
+	{
+		id: "spaceship",
+		title: "Spaceship Ambience",
+		image: "placeholder.jpg",
+		sound: "spaceship.mp3"
+	},
+	{
+		id: "rain",
+		title: "Rainfall",
+		image: "placeholder.jpg",
+		sound: "rain.mp3"
+	},
+	{
+		id: "storm",
+		title: "Rain + Thunder",
+		image: "placeholder.jpg",
+		sound: "storm.mp3"
+	},
+	{
+		id: "grass_in_wind",
+		title: "Grass in the wind",
+		image: "placeholder.jpg",
+		sound: "grass_in_wind.mp3"
+	},
+	{
+		id: "seawaves",
+		title: "Sea waves",
+		image: "placeholder.jpg",
+		sound: "seawaves.mp3"
+	},
+	{
+		id: "seawaves_seagulls",
+		title: "Sea waves with seagulls",
+		image: "placeholder.jpg",
+		sound: "seawaves_seagulls.mp3"
+	},
+	{
+		id: "crickets",
+		title: "Crickets",
+		image: "placeholder.jpg",
+		sound: "crickets.mp3"
+	},
+	{
+		id: "stream_birds",
+		title: "Stream and birds",
+		image: "placeholder.jpg",
+		sound: "stream_birds.mp3"
+	},
+	{
+		id: "forest",
+		title: "Forest ambience",
+		image: "placeholder.jpg",
+		sound: "forest.mp3"
+	},
+	{
+		id: "farm",
+		title: "Farm (Bells, sheep and cows)",
+		image: "placeholder.jpg",
+		sound: "farm.mp3"
+	},
 ];
+
+options.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0));
+let i = 1;
+options.forEach((elem) => {elem.order = i++;});
+
 
 const pool = document.getElementById('options_pool');
 const active = document.getElementById('options_active');
