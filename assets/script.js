@@ -73,6 +73,72 @@ options = [
 		image: "placeholder.jpg",
 		sound: "farm.mp3"
 	},
+	{
+		id: "farm",
+		title: "Farm (Bells, sheep and cows)",
+		image: "placeholder.jpg",
+		sound: "farm.mp3"
+	},
+	{
+		id: "farm",
+		title: "Farm (Bells, sheep and cows)",
+		image: "placeholder.jpg",
+		sound: "farm.mp3"
+	},
+	{
+		id: "affirmation_breeder",
+		title: "Affirmation: Breeder",
+		image: "placeholder.jpg",
+		sound: "affirmation_breeder.mp3"
+	},
+	{
+		id: "affirmation_brood_hen",
+		title: "Affirmation: Brood Hen",
+		image: "placeholder.jpg",
+		sound: "affirmation_brood_hen.mp3"
+	},
+	{
+		id: "affirmation_good_boy",
+		title: "Affirmation: Good Boy",
+		image: "placeholder.jpg",
+		sound: "affirmation_good_boy.mp3"
+	},
+	{
+		id: "affirmation_dragon",
+		title: "Affirmation: Dragon",
+		image: "placeholder.jpg",
+		sound: "affirmation_dragon.mp3"
+	},
+	{
+		id: "affirmation_drone",
+		title: "Affirmation: Drone",
+		image: "placeholder.jpg",
+		sound: "affirmation_drone.mp3"
+	},
+	{
+		id: "affirmation_good_girl",
+		title: "Affirmation: Good Girl",
+		image: "placeholder.jpg",
+		sound: "affirmation_good_girl.mp3"
+	},
+	{
+		id: "affirmation_pony",
+		title: "Affirmation: Pony",
+		image: "placeholder.jpg",
+		sound: "affirmation_pony.mp3"
+	},
+	{
+		id: "affirmation_self",
+		title: "Affirmation: Self",
+		image: "placeholder.jpg",
+		sound: "affirmation_self.mp3"
+	},
+	{
+		id: "affirmation_toy",
+		title: "Affirmation: Toy",
+		image: "placeholder.jpg",
+		sound: "affirmation_toy.mp3"
+	},
 ];
 
 options.sort((a,b) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0));
@@ -112,11 +178,11 @@ function toggle(id, sound) {
 				this.currentTime = 0;
 				this.play();
 			}, false);
-			audio.volume = 0;
+			audio.volume = 0.5;
 			active_sounds[id] = {
 				obj: audio,
 				active: 1,
-				volume: 0
+				volume: 0.5
 			};
 		}
 		
@@ -130,10 +196,10 @@ function toggle(id, sound) {
 		active_sounds[id].obj.currentTime = 0;
 		active_sounds[id].active = 0;
 		
-		// set volume to 0
-		active_sounds[id].obj.volume = 0;
-		active_sounds[id].volume = 0;
-		document.getElementById(id).querySelector('.volume-toggle').value = 0;
+		// set volume to 50%
+		active_sounds[id].obj.volume = 0.5;
+		active_sounds[id].volume = 0.5;
+		document.getElementById(id).querySelector('.volume-toggle').value = 50;
 	}
 	
 	box.setAttribute('active', 1 - isActive);
